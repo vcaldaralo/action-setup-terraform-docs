@@ -12,6 +12,8 @@ print_title(){
 get_terraform_docs() {
     print_title "Get terraform-docs: ${TFDOCS_VERSION}"
     cd /tmp
+    rm -f get_terraform-docs
+    ls -l
     echo ${PWD}
     curl -Lo ./terraform-docs.tar.gz "https://github.com/terraform-docs/terraform-docs/releases/download/${TFDOCS_VERSION}/terraform-docs-${TFDOCS_VERSION}-linux-arm64.tar.gz"
     tar -xzf terraform-docs.tar.gz
