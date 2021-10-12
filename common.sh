@@ -16,7 +16,7 @@ get_terraform_docs() {
     curl -Lo ./terraform-docs.tar.gz "https://github.com/terraform-docs/terraform-docs/releases/download/${TFDOCS_VERSION}/terraform-docs-${TFDOCS_VERSION}-linux-arm64.tar.gz"
     tar -xzf terraform-docs.tar.gz
     chmod +x terraform-docs
-    sudo mv terraform-docs /usr/local/bin/terraform-docs
+    mv -f terraform-docs /usr/local/bin/terraform-docs
     echo "$(ls -l /usr/local/bin/| grep terraform)"
     echo $PATH
     echo "$(terraform-docs -v)"
