@@ -21,9 +21,9 @@ async function downloadCLI(url) {
 
 async function run() {
   try {
-    const inputVersion = core.getInput('tflint_version');
+    const inputVersion = core.getInput('version');
 
-    core.debug(`Getting download URL for tflint version ${version}: ${platform} ${arch}`);
+    core.debug(`Getting download URL for terraform-docs version ${version}`);
     const url = `https://github.com/terraform-docs/terraform-docs/releases/download/${version}/terraform-docs-${version}-linux-amd64.tar.gz`;
 
     const pathToCLI = await downloadCLI(url);
