@@ -27,7 +27,7 @@ jobs:
     #   run:
 
       - name: "Setup terraform docs"
-        uses: vcaldaralo/action-terraform-docs@master
+        uses: vcaldaralo/action-setup-terraform-docs@master
         with:
           version: "v0.16.0"
 ```
