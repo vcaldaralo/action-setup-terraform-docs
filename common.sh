@@ -1,7 +1,7 @@
 #!/bin/bash -l
 set -eo pipefail
 
-export TFDOCS_VERSION=${TFDOCS_VERSION:="v.0.16.0"}
+export TFDOCS_VERSION=${TFDOCS_VERSION:="v0.16.0"}
 
 print_title(){
     echo "#####################################################"
