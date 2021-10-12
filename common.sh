@@ -18,8 +18,7 @@ get_terraform_docs() {
     ls -l 
     chmod +x terraform-docs
     mv -f terraform-docs /usr/local/bin/terraform-docs
-    ls -l /usr/local/bin/
-    echo "$(ls -l /usr/local/bin/| grep terraform)"
+    ls -l /usr/local/bin/ | grep terraform
     echo $PATH
     echo "$(terraform-docs -v)"
 }
