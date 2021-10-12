@@ -17,6 +17,7 @@ get_terraform_docs() {
     tar -xzf terraform-docs.tar.gz
     chmod +x terraform-docs
     mv -f terraform-docs /usr/local/bin/terraform-docs
+    ls -l /usr/local/bin/
     echo "$(ls -l /usr/local/bin/| grep terraform)"
     echo $PATH
     echo "$(terraform-docs -v)"
