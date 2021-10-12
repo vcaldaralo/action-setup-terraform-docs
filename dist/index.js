@@ -5417,7 +5417,7 @@ const tc = __nccwpck_require__(594);
 
 async function downloadCLI(url) {
   core.debug(`Downloading terraform-docs CLI from ${url}`);
-  const pathToCLIZip = await tc.downloadTool(url);
+  const pathToCLITar = await tc.downloadTool(url);
 
   core.debug('Extracting terraform-docs CLI zip file');
   const pathToCLI = await tc.extractTar(pathToCLITar);
