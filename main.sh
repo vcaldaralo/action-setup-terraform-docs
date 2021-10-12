@@ -9,4 +9,3 @@ export SCRIPT_DIR
 source "$SCRIPT_DIR/common.sh"
 
 install_terraform_docs
-remove_terraform_docs
