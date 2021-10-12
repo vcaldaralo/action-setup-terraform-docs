@@ -1,7 +1,7 @@
 name: 'Terraform docs setup'
 description: GitHub Action for setup terraform-docs at specified version'
 inputs:
-  version:  # id of input
+  tfdocs_version:  # id of input
     description: 'terraform-docs version to install'
     required: false
     default: 'v0.16.0'

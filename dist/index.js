@@ -5432,10 +5432,10 @@ async function downloadCLI(url) {
 
 async function run() {
   try {
-    const inputVersion = core.getInput('version');
+    const inputVersion = core.getInput('tfdocs_version');
 
-    core.debug(`Getting download URL for terraform-docs version ${version}`);
-    const url = `https://github.com/terraform-docs/terraform-docs/releases/download/${version}/terraform-docs-${version}-linux-amd64.tar.gz`;
+    core.debug(`Getting download URL for terraform-docs version ${inputVersion}`);
+    const url = `https://github.com/terraform-docs/terraform-docs/releases/download/${inputVersion}/terraform-docs-${inputVersion}-linux-amd64.tar.gz`;
 
     const pathToCLI = await downloadCLI(url);
 
@@ -5444,7 +5444,7 @@ async function run() {
     // const matchersPath = path.join(__dirname, '..', '.github');
     // core.info(`##[add-matcher]${path.join(matchersPath, 'matchers.json')}`);
 
-    return version;
+    return inputVersion;
   } catch (ex) {
     core.error(ex);
     throw ex;
