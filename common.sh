@@ -11,10 +11,12 @@ print_title(){
 
 get_terraform_docs() {
     print_title "Get terraform-docs: ${TFDOCS_VERSION}"
-    echo "https://github.com/terraform-docs/terraform-docs/releases/download/${TFDOCS_VERSION}/terraform-docs-${TFDOCS_VERSION}-linux-arm64.tar.gz"
-    curl -L "https://github.com/terraform-docs/terraform-docs/releases/download/${TFDOCS_VERSION}/terraform-docs-${TFDOCS_VERSION}-linux-arm64.tar.gz" | tar xvz
+    cd /tmp
+    echo ${PWD}
+    curl -Lo ./terraform-docs.tar.gz "https://github.com/terraform-docs/terraform-docs/releases/download/${TFDOCS_VERSION}/terraform-docs-${TFDOCS_VERSION}-linux-arm64.tar.gz"
+    tar -xzf terraform-docs.tar.gz
     chmod +x terraform-docs
-    sudo mv terraform-docs /usr/local/bin/terraform-docs
+    mv terraform-docs /usr/local/bin/terraform-docs
 }
 
 install_terraform_docs() {
