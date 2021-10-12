@@ -21,10 +21,10 @@ jobs:
   helm-suite:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2 
 
-    # - name: myOtherJob1
-    #   run:
+      # - name: myOtherJob1
+      #   run:
 
       - name: "Setup terraform docs"
         uses: vcaldaralo/action-setup-terraform-docs@master
