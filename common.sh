@@ -18,6 +18,7 @@ get_terraform_docs() {
     chmod +x terraform-docs
     sudo mv terraform-docs /usr/local/bin/terraform-docs
     echo "$(ls -l /usr/local/bin/| grep terraform)"
+    echo $PATH
 }
 
 install_terraform_docs() {
