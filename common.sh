@@ -19,6 +19,7 @@ get_terraform_docs() {
     sudo mv terraform-docs /usr/local/bin/terraform-docs
     echo "$(ls -l /usr/local/bin/| grep terraform)"
     echo $PATH
+    echo "$(terraform-docs -v)"
 }
 
 install_terraform_docs() {
