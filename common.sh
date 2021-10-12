@@ -10,7 +10,6 @@ print_title(){
 }
 
 get_terraform_docs() {
-    print_title "Get terraform-docs: ${TFDOCS_VERSION}"
     cd /tmp
     curl -Lo ./terraform-docs.tar.gz "https://github.com/terraform-docs/terraform-docs/releases/download/${TFDOCS_VERSION}/terraform-docs-${TFDOCS_VERSION}-linux-amd64.tar.gz"
     tar -xzf terraform-docs.tar.gz
@@ -20,6 +19,7 @@ get_terraform_docs() {
 }
 
 install_terraform_docs() {
+    print_title "Installing terraform-docs: ${TFDOCS_VERSION}"
     if ! command -v terraform-docs; then
         echo "Terraform docs is missing"
         get_terraform_docs
@@ -30,5 +30,6 @@ install_terraform_docs() {
 }
 
 remove_terraform_docs(){
+    print_title "Removing terraform-docs: ${TFDOCS_VERSION}"
     sudo rm -rf /usr/local/bin/terraform-docs
 }
