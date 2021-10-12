@@ -3,6 +3,6 @@ description: GitHub Action for setup terraform-docs at specified version'
 runs:
   using: "composite"
   steps:
-    # - uses: actions/setup-python@v2
+    - uses: actions/setup-python@v2
     - run: ${{ github.action_path }}/main.sh
       shell: bash
